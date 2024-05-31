@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(rplidar_ros)
+project(xycar_lidar)
 
 set(RPLIDAR_SDK_PATH "./sdk/")
 
@@ -23,13 +23,13 @@ include_directories(
 
 catkin_package()
 
-add_executable(rplidarNode src/node.cpp ${RPLIDAR_SDK_SRC})
-target_link_libraries(rplidarNode ${catkin_LIBRARIES})
+add_executable(xycar_lidar src/node.cpp ${RPLIDAR_SDK_SRC})
+target_link_libraries(xycar_lidar ${catkin_LIBRARIES})
 
-add_executable(rplidarNodeClient src/client.cpp)
-target_link_libraries(rplidarNodeClient ${catkin_LIBRARIES})
+add_executable(xycar_lidar_NodeClient src/client.cpp)
+target_link_libraries(xycar_lidar_NodeClient ${catkin_LIBRARIES})
 
-install(TARGETS rplidarNode rplidarNodeClient
+install(TARGETS xycar_lidar xycar_lidar_NodeClient
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

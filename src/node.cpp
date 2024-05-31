@@ -180,7 +180,7 @@ static float getAngle(const rplidar_response_measurement_node_hq_t& node)
 }
 
 int main(int argc, char * argv[]) {
-    ros::init(argc, argv, "rplidar_node");
+    ros::init(argc, argv, "xycar_lidar");
 
     std::string serial_port;
     int serial_baudrate = 115200;
